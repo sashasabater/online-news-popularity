@@ -20,6 +20,8 @@ def model_test(model, X_tn, X_tst, y_tn, y_tst):
     model = model.fit(X_tn, y_tn)
     yhat = model.predict(X_tst)
     return mse(y_tst, yhat) ** .5
+
+
         
     
     
