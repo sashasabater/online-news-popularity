@@ -13,3 +13,6 @@ Upon data exploraton, I noticed quite a range of numbers of shares, from 1 to mo
 With a mean of about 3000, and a standard deviation of more than 11,000, I figured that there must be a number of outliers that I should handle before trying to fit any models. 
 
 ![Outliers](./img/outliers.png)
+
+Of the total 39,644 articles, 58 had at least 100,000 shares. This accounts for only 0.15% of the dataset. Thus I decided to remove these outliers for the purpose of this project. 
+
