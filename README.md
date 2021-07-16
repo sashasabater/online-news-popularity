@@ -18,3 +18,9 @@ With a mean of about 3000, and a standard deviation of more than 11,000, I figur
 
 Of the total 39,644 articles, 58 had at least 100,000 shares. This accounts for only 0.15% of the dataset. Thus I decided to remove these outliers for the purpose of this 
 
+## Modeling
+To start, I began with a baseline model by prediting the total mean of shares for each article. With this baseline model, the Root Mean Square Error (RMSE) was 5990.99. This is the score I aim to beat. 
+
+Next I fit a simple linear regression model, not expecting much of a performance improvement from the baseline. The high variability in the dataset suggests that there are various distributions within the dataset, which would making trying to fit a linear regressor problematic (due to the lack of a linear relationship). The RMSE for a linear regression model was 5736.63. 
+
+I moved on to a Random Forest Regressor, using a GridSearchCV to find the optimal hyperparameters. In doing so, my best model performed with an RMSE of 5707.11. 
