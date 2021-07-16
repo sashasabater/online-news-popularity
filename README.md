@@ -23,4 +23,22 @@ To start, I began with a baseline model by prediting the total mean of shares fo
 
 Next I fit a simple linear regression model, not expecting much of a performance improvement from the baseline. The high variability in the dataset suggests that there are various distributions within the dataset, which would making trying to fit a linear regressor problematic (due to the lack of a linear relationship). The RMSE for a linear regression model was 5736.63. 
 
-I moved on to a Random Forest Regressor, using a GridSearchCV to find the optimal hyperparameters. In doing so, my best model performed with an RMSE of 5707.11. 
+
+![Results](./img/results.png)
+
+
+I moved on to a Random Forest Regressor, using a GridSearchCV to find optimal hyperparameters. In doing so, my best model performed with an RMSE of 5707.11. I did another GridSearchCV to uncover optimal hyperparameters for a Gradient Boosting Regressor, and used these hyperparameters to fit a model that performed slightly better, with an RMSE of 5683.95.
+
+## Feature Importances  
+While these results are not optimal, we can still gain some insight through the model's feature importances. 
+
+![Feature Importances](./img/feature-importances.png)
+
+According to the model, these are the top ten most impactful features when predicting the numbers of shares. The top five feature names are 'kw_max_avg', 'kw_avg_avg', 'self_reference_min_shares', 'num_hrefs', 'self_reference_avg_shares'. The first two refer to the number of shares and keywords contained in the meta-data of the articles referenced by the articles for which we have in our actual dataset. 'Self_reference' refers to other Mashable.com articles referenced, and the shares these articles received. Lastly, 'num_hrefs' refers to the number of links shared in the article. Gained with this knowledge, those taking part in the online marketplace of news and information can set themselves up to be as popular as possible. 
+
+## Future Exploration 
+
+Since this dataset is so varied, with articles having 1-10 shares and some having more than 100,000, my next step is to employ clustering to uncover different categories of articles that might not be in line with topic categories. In doing so, we could produce classes of articles, and if we can do this well enough then we can accurately apply regression within these classes to have a better performing model in predicting the actual number of shares. 
+
+
+
