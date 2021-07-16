@@ -10,9 +10,11 @@ Upon data exploraton, I noticed quite a range of numbers of shares, from 1 to mo
 
 ![Shares_EDA](./img/eda-outlier.png)
 
-With a mean of about 3000, and a standard deviation of more than 11,000, I figured that there must be a number of outliers that I should handle before trying to fit any models. 
+With a mean of about 3000, and a standard deviation of more than 11,000, I figured that there must be a number of outliers that I must address before trying to fit any regression models. Additionally, the vast majority of these articles had around 1000 shares. 
+
+![Histogram](./img/histogram-shares.png)
 
 ![Outliers](./img/outliers.png)
 
-Of the total 39,644 articles, 58 had at least 100,000 shares. This accounts for only 0.15% of the dataset. Thus I decided to remove these outliers for the purpose of this project. 
+Of the total 39,644 articles, 58 had at least 100,000 shares. This accounts for only 0.15% of the dataset. Thus I decided to remove these outliers for the purpose of this 
 
