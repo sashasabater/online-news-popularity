@@ -16,7 +16,7 @@ With a mean of about 3000, and a standard deviation of more than 11,000, I figur
 
 ![Outliers](./img/outliers.png)
 
-Of the total 39,644 articles, 58 had at least 100,000 shares. This accounts for only 0.15% of the dataset. Thus I decided to remove these outliers for the purpose of this 
+Of the total 39,644 articles, 58 had at least 100,000 shares. This accounts for only 0.15% of the dataset. Thus I decided to remove these outliers for the purpose of this project.
 
 ## Modeling
 To start, I began with a baseline model by prediting the total mean of shares for each article. With this baseline model, the Root Mean Square Error (RMSE) was 5990.99. This is the score I aim to beat. 
